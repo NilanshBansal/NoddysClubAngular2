@@ -1,0 +1,58 @@
+
+  <div class="container">
+
+    <form class="form-signin" [formGroup]="loginForm" (submit)="signinWithEmailPass()">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="text" id="inputEmail" formControlName="email" name="email" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" formControlName="password" name="password" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+            <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <input type="submit" class="btn btn-lg btn-primary" value="Sign in" [disabled]="loginForm.invalid">
+        
+    </form>
+        <div class="container" class="col-md-4 col-md-offset-4">
+                <button  class="btn btn-lg  " (click)="signinWithFb()" ><!--<i class="fa fa-facebook-square" aria-hidden="true" style="width:50px;"></i>-->
+                <img src="assets/images/fblogo.png" width="24px">FACEBOOK</button>
+            <!--<button  class="btn btn-link" (click)="signinWithFb()" ><img src="assets/images/fblogin.png"  width="250px" ></button>-->
+            <!--<button  class="btn btn-link" (click)="signinWithGoogle()" ><img src="assets/images/google.png" ></button>-->
+            
+            <button class="btn btn-lg " (click)="signinWithGoogle()" ><!--<i class="fa fa-google-plus-square" aria-hidden="true" style="width:50px;"></i>-->
+            <img src="assets/images/googlelogo.png" width="24px">GOOGLE</button>
+        </div>
+       <div class="text-center col-md-4 col-md-offset-4" *ngIf="!signupVar"> 
+        New User?<button  class="btn btn-link" (click)="signupClicked()" >Signup</button>
+       </div>
+</div>
+
+<div class="container" *ngIf="signupVar">
+
+    <form class="form-signin"[formGroup]="signupForm" (submit)="submitSignup()">
+        <h2 class="form-signin-heading">Please sign up</h2>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="text" id="inputEmail" name="email" formControlName="email" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" formControlName="password" name="password" class="form-control" placeholder="Password" required>
+        <label for="confirmPassword" class="sr-only">Confirm Password</label>
+        <input type="password" id="inputPassword" formControlName="confirmPassword" name="confirmPassword" class="form-control" placeholder="Confirm Password" required>
+        
+        <button class="btn btn-lg btn-primary " type="submit" [disabled]="signupForm.invalid">Sign up</button>
+    </form>
+     <div class="container" class="col-md-4 col-md-offset-4">
+                <button  class="btn btn-lg  btn-default" (click)="signinWithFb()" ><i class="fa fa-facebook-square" aria-hidden="true" style="width:50px;"></i>LOGIN</button>
+            <!--<button  class="btn btn-link" (click)="signinWithFb()" ><img src="assets/images/fblogin.png"  width="250px" ></button>-->
+            <!--<button  class="btn btn-link" (click)="signinWithGoogle()" ><img src="assets/images/google.png" ></button>-->
+        <button class="btn btn-lg btn-default" (click)="signinWithFb()" ><i class="fa fa-google-plus-square" aria-hidden="true" style="width:50px;"></i>LOGIN</button>
+        </div>
+
+</div>
+
+
+
+
+
+

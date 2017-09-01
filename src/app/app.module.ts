@@ -1,10 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import {RouterModule,Routes} from '@angular/router';
-import { NavbarComponent } from './navbar/navbar.component';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { FirebaseService } from "./services/firebase.service";
+import { HomeComponent } from "./components/home/home.component";
+import { NavbarComponent } from "./components/navbar/navbar.component";
+
+export const firebaseConfig = {
+  
+  
+    apiKey: 'AIzaSyBua6Yn0H3flTBtEN6ZGLf_88XXNp2-hJg',
+    authDomain: 'noddysapp.firebaseapp.com',
+    databaseURL: 'https://noddysapp.firebaseio.com',
+    projectId: 'noddysapp',
+    storageBucket: 'noddysapp.appspot.com',
+    messagingSenderId: '658261542367'
+  
+};
 
 const appRoutes:Routes=[
   {path:'home',component:HomeComponent}
@@ -18,9 +34,14 @@ const appRoutes:Routes=[
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    AngularFireModule.initializeApp(firebaseConfig),
+    RouterModule.forRoot(appRoutes),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
