@@ -9,6 +9,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FirebaseService } from "./services/firebase.service";
 import { HomeComponent } from "./components/home/home.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
+import { ModalComponent } from "./components/modal/modal.component";
 
 export const firebaseConfig = {
   
@@ -23,14 +24,15 @@ export const firebaseConfig = {
 };
 
 const appRoutes:Routes=[
-  {path:'home',component:HomeComponent}
+  {path:'',component:HomeComponent},
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

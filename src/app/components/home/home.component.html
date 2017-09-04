@@ -1,58 +1,159 @@
+<div class="component">
+    <div class="container navbarclass">
+        <ul class="nav nav-pills" style="display:flex;justify-content:center">
+            <li class="active" id="signInLi"><a data-toggle="tab" (click)="signinClicked()">SIGN IN</a></li>
+            <li id="signUpLi"><a data-toggle="tab" (click)="signupClicked()">SIGN UP</a></li>
+        </ul>
+        <br>
+    </div>
 
-  <div class="container">
 
-    <form class="form-signin" [formGroup]="loginForm" (submit)="signinWithEmailPass()">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="text" id="inputEmail" formControlName="email" name="email" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" formControlName="password" name="password" class="form-control" placeholder="Password" required>
-        <div class="checkbox">
-            <label>
+    <div class="container" *ngIf="!signupVar">
+
+        <form class="form-signin" [formGroup]="loginForm" (submit)="signinWithEmailPass()">
+            <h2 class="form-signin-heading">Log Into Your Account</h2><br><br>
+            <label for="inputEmail" class="sr-only">Email </label>
+            <input type="email" id="inputEmail" formControlName="email" name="email" class="form-control" placeholder="Email address"
+                autocomplete="off" autocomplete="new-password" required autofocus pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+            <div *ngIf="loginForm.controls.email.invalid && (loginForm.controls.email.dirty || loginForm.controls.email.touched)" class="alert alert-danger">
+                <div *ngIf="loginForm.controls.email.errors.required">
+                    Email is required.
+                </div>
+                <div *ngIf="loginForm.controls.email.errors.pattern">
+                    Invalid Email !
+                </div>
+
+            </div>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" autocomplete="new-password" formControlName="password" name="password" class="form-control"
+                placeholder="Password" required>
+            <div class="checkbox">
+                <label>
             <input type="checkbox" value="remember-me"> Remember me
           </label>
-        </div>
-        <input type="submit" class="btn btn-lg btn-primary" value="Sign in" [disabled]="loginForm.invalid">
+            </div>
+            <input type="submit" class="btn btn-lg btn-primary" value="Sign in" [disabled]="loginForm.invalid"><br>
+            <a class="btn btn-link" style="padding-left:0px;" (click)="modal.show()">Forgot Password?</a>
+        </form>
+           
         
-    </form>
-        <div class="container" class="col-md-4 col-md-offset-4">
-                <button  class="btn btn-lg  " (click)="signinWithFb()" ><!--<i class="fa fa-facebook-square" aria-hidden="true" style="width:50px;"></i>-->
+        <div class="container" style="display:flex; justify-content:center;margin-top:20px;">
+            <div>
+                <button class="btn btn-lg  btn-default" (click)="signinWithFb()"><!--<i class="fa fa-facebook-square" aria-hidden="true" style="width:50px;"></i>-->
                 <img src="assets/images/fblogo.png" width="24px">FACEBOOK</button>
-            <!--<button  class="btn btn-link" (click)="signinWithFb()" ><img src="assets/images/fblogin.png"  width="250px" ></button>-->
-            <!--<button  class="btn btn-link" (click)="signinWithGoogle()" ><img src="assets/images/google.png" ></button>-->
-            
-            <button class="btn btn-lg " (click)="signinWithGoogle()" ><!--<i class="fa fa-google-plus-square" aria-hidden="true" style="width:50px;"></i>-->
-            <img src="assets/images/googlelogo.png" width="24px">GOOGLE</button>
+
+                <button class="btn btn-lg btn-default" (click)="signinWithGoogle()"><!--<i class="fa fa-google-plus-square" aria-hidden="true" style="width:50px;"></i>-->
+            <img src="assets/images/googlelogo.png" width="24px">  GOOGLE </button>
+            </div>
         </div>
-       <div class="text-center col-md-4 col-md-offset-4" *ngIf="!signupVar"> 
-        New User?<button  class="btn btn-link" (click)="signupClicked()" >Signup</button>
-       </div>
-</div>
 
-<div class="container" *ngIf="signupVar">
+    </div>
 
-    <form class="form-signin"[formGroup]="signupForm" (submit)="submitSignup()">
-        <h2 class="form-signin-heading">Please sign up</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="text" id="inputEmail" name="email" formControlName="email" class="form-control" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" formControlName="password" name="password" class="form-control" placeholder="Password" required>
-        <label for="confirmPassword" class="sr-only">Confirm Password</label>
-        <input type="password" id="inputPassword" formControlName="confirmPassword" name="confirmPassword" class="form-control" placeholder="Confirm Password" required>
-        
-        <button class="btn btn-lg btn-primary " type="submit" [disabled]="signupForm.invalid">Sign up</button>
+    <div class="container" *ngIf="signupVar">
+
+        <form class="form-signin" [formGroup]="signupForm" (submit)="submitSignup()" novalidate>
+            <h2 class="form-signin-heading">Create Your Account</h2><br><br>
+            <label for="name" class="sr-only">Name</label>
+            <input type="text" id="name" name="name" formControlName="name" class="form-control" placeholder="Name" required #ptani>
+
+            <div *ngIf="signupForm.controls.name.invalid && (signupForm.controls.name.dirty || signupForm.controls.name.touched)" class="alert alert-danger">
+                <div *ngIf="signupForm.controls.name.errors.required">
+                    Name is required.
+                </div>
+                <div *ngIf="signupForm.controls.name.errors.maxlength">
+                    Name cannot be greater than 30 characters .
+                </div>
+            </div>
+            <label for="inputEmail" class="sr-only">Email </label>
+            <input type="email" id="inputEmail" name="email" formControlName="email" class="form-control" placeholder="Email address"
+                autocomplete="off" autocomplete="new-password" required autofocus pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+            <div *ngIf="signupForm.controls.email.invalid && (signupForm.controls.email.dirty || signupForm.controls.email.touched)"
+                class="alert alert-danger">
+                <div *ngIf="signupForm.controls.email.errors.required">
+                    Email is required.
+                </div>
+                <div *ngIf="signupForm.controls.email.errors.pattern">
+                    Invalid Email !
+                </div>
+
+            </div>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" formControlName="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}" name="password"
+                class="form-control" placeholder="Password" autocomplete="new-password" required>
+
+            <div *ngIf="signupForm.controls.password.invalid && (signupForm.controls.email.dirty || signupForm.controls.email.touched)"
+                class="alert alert-danger">
+                <div *ngIf="signupForm.controls.password.errors.required">
+                    Password is required.
+                </div>
+                <div *ngIf="signupForm.controls.password.errors.pattern">
+                    Invalid Password ! It must be 8-15 char long,should have atleast 1 uppercase,1 lowercase and 1 special character!
+                </div>
+
+            </div>
+            <label for="confirmPassword" class="sr-only">Confirm Password</label>
+            <input type="password" id="inputPassword" formControlName="confirmPassword" name="confirmPassword" class="form-control" placeholder="Confirm Password"
+                required>
+
+            <input class="btn btn-lg btn-primary " type="submit" value="Sign Up" [disabled]="signupForm.invalid">
+        </form>
+        <div class="container" class="col-md-4 col-md-offset-4" style="display:flex; justify-content:center;margin-top:20px;">
+            <div>
+                <button class="btn btn-lg  btn-default" (click)="signinWithFb()"><!--<i class="fa fa-facebook-square" aria-hidden="true" style="width:50px;"></i>-->
+                <img src="assets/images/fblogo.png" width="24px">FACEBOOK</button>
+                <button class="btn btn-lg btn-default" (click)="signinWithGoogle()"><!--<i class="fa fa-google-plus-square" aria-hidden="true" style="width:50px;"></i>-->
+        <img src="assets/images/googlelogo.png" width="24px">  GOOGLE </button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--<button (click)="verifyEmail()">CLICK ME TO VERIFY EMAIL</button>
+<button (click)="resetPassword()">CLICK ME TO RESET PASSWORD</button>-->
+
+
+   
+
+ 
+  <app-modal #modal>
+    <div class="app-modal-header">
+     <!-- header-->
+     
+    </div>
+    <div class="app-modal-body">
+      <!--Whatever content you like, form fields, anything-->
+
+      <div class="remodal" tabindex="-1">
+    <div class="reset-password-modal--info">
+        <div class="reset-password-modal--header">
+            Reset Your Password
+        </div>
+        <div class="reset-password-modal--description">
+            Please provide the email address you used when you signed up for your Noddy's Club account.<br>
+            <br> We will send you an email with a link to reset your password.
+        </div>
+    </div>
+    <form class="reset__form" id="reset-form" name="reset-form" onsubmit="return event.preventDefault(),doAuthReset(),!1">
+        <!--<div class="hero__form__error messages"></div>-->
+        <div>
+            <div class="input-container PosR">
+                <input autocomplete="new-password" class="w100" id="reset-email" name="reset-email" placeholder="Email" required type="email" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">                
+                <input class="btn btn-block btn-primary btn-login center-block" id="submitReset" type="submit" value="Send Email">
+            </div>
+        </div>
     </form>
-     <div class="container" class="col-md-4 col-md-offset-4">
-                <button  class="btn btn-lg  btn-default" (click)="signinWithFb()" ><i class="fa fa-facebook-square" aria-hidden="true" style="width:50px;"></i>LOGIN</button>
-            <!--<button  class="btn btn-link" (click)="signinWithFb()" ><img src="assets/images/fblogin.png"  width="250px" ></button>-->
-            <!--<button  class="btn btn-link" (click)="signinWithGoogle()" ><img src="assets/images/google.png" ></button>-->
-        <button class="btn btn-lg btn-default" (click)="signinWithFb()" ><i class="fa fa-google-plus-square" aria-hidden="true" style="width:50px;"></i>LOGIN</button>
-        </div>
-
 </div>
 
+    </div>
+    <div class="app-modal-footer">
+      <button type="button" class="btn btn-default" (click)="modal.hide()">Close</button>
+      <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+    </div>
+  </app-modal>
 
 
 
+</div>
 
 
