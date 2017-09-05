@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -40,14 +40,17 @@ export class HomeComponent implements OnInit {
       alert("logged in already!");
     }
 
-    if (this.signupVar) {
+    /*if (this.signupVar) {
       this.signupForm = this.fb.group({
         name:['',[Validators.required,Validators.maxLength(30)]],
         email: ['', Validators.required],
-        password: ['', Validators.required],
+        pass:this.fb.group({
+          password: ['', Validators.required],
         confirmPassword: ['', Validators.required]
+        },{validator:this.emailMatcher})
+        
       });
-    }
+    }*/
 
   }
 
@@ -130,11 +133,21 @@ export class HomeComponent implements OnInit {
       this.signupForm = this.fb.group({
         name:[earliername,[Validators.required,Validators.maxLength(30)]],
         email: [earlierEmail, Validators.required],
-        password: [earlierPassword, Validators.required],
+        pass:this.fb.group({
+          password: [earlierPassword, Validators.required],
         confirmPassword: [earlierConfirmPassword, Validators.required]
+        },{validator:this.emailMatcher})
+        
       });
     }
   }
+
+    emailMatcher = (control: AbstractControl): {[key: string]: boolean} => {
+  const password = control.get('password');
+  const confirm = control.get('confirmPassword');
+  if (!password || !confirm) return null;
+  return password.value === confirm.value ? null : { nomatch: true };
+};
 
   submitSignup() {
     alert("hello hi");
@@ -171,7 +184,6 @@ export class HomeComponent implements OnInit {
   resetPassword() {
     // var emailAddress=prompt("Enter your email address: ","");
     var emailAddress=this.resetForm.value["email"];
-    alert(emailAddress);
     var auth = firebase.auth();
     //var curuser = firebase.auth().currentUser;
     //var emailAddress = curuser.email;
