@@ -16,7 +16,8 @@ export class HomeComponent implements OnInit {
   signupForm: FormGroup;
   signupVar: boolean = false;
   isLoggedIn: boolean = false;
-  
+  resetForm:FormGroup;
+
   constructor(public afAuth: AngularFireAuth,
     public fb: FormBuilder,
     public router: Router) {
@@ -28,6 +29,10 @@ export class HomeComponent implements OnInit {
     this.loginForm = this.fb.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
+    });
+
+    this.resetForm=this.fb.group({
+      email:['',Validators.required]
     });
 
     if (this.isLoggedIn) {
@@ -43,6 +48,7 @@ export class HomeComponent implements OnInit {
         confirmPassword: ['', Validators.required]
       });
     }
+
   }
 
   signinWithGoogle() {
@@ -163,7 +169,8 @@ export class HomeComponent implements OnInit {
   }
 
   resetPassword() {
-    var emailAddress=prompt("Enter your email address: ","");
+    // var emailAddress=prompt("Enter your email address: ","");
+    var emailAddress=this.resetForm.value["email"];
     alert(emailAddress);
     var auth = firebase.auth();
     //var curuser = firebase.auth().currentUser;
