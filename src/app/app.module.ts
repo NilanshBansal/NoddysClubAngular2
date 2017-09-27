@@ -10,6 +10,9 @@ import { FirebaseService } from "./services/firebase.service";
 import { HomeComponent } from "./components/home/home.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { ModalComponent } from "./components/modal/modal.component";
+import { HttpModule } from '@angular/http';
+import { DashboardComponent } from "./components/dashboard/dashboard.component";
+import { AuthService } from "./services/auth.service";
 
 export const firebaseConfig = {
   
@@ -25,6 +28,7 @@ export const firebaseConfig = {
 
 const appRoutes:Routes=[
   {path:'',component:HomeComponent},
+  {path:'dashboard',component:DashboardComponent,canActivate:[AuthService]},
 ]
 
 @NgModule({
@@ -32,7 +36,8 @@ const appRoutes:Routes=[
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    ModalComponent
+    ModalComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -41,9 +46,10 @@ const appRoutes:Routes=[
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
-  providers: [FirebaseService],
+  providers: [FirebaseService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
