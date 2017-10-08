@@ -13,7 +13,9 @@ import { ModalComponent } from "./components/modal/modal.component";
 import { HttpModule } from '@angular/http';
 import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import { AuthService } from "./services/auth.service";
+import { IonRangeSliderModule } from "ng2-ion-range-slider";
 
+import * as $ from 'jquery';
 export const firebaseConfig = {
   
   
@@ -47,7 +49,9 @@ const appRoutes:Routes=[
     AngularFireAuthModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    IonRangeSliderModule,
+  
   ],
   providers: [FirebaseService,AuthService],
   bootstrap: [AppComponent]

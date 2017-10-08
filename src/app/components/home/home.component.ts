@@ -4,6 +4,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from "../../services/auth.service";
 
 @Component({
   selector: 'app-home',
@@ -20,7 +21,8 @@ export class HomeComponent implements OnInit {
 
   constructor(public afAuth: AngularFireAuth,
     public fb: FormBuilder,
-    public router: Router) {
+    public router: Router,
+    private authService:AuthService) {
     this.user = afAuth.authState;
   }
 
@@ -59,6 +61,7 @@ export class HomeComponent implements OnInit {
     const promise = this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(function (user) {
       alert("successful rotate loader");
       that.isLoggedIn = true;
+      localStorage.setItem('loggedIn','true');
     });
 
     promise.catch(e => {
@@ -68,6 +71,8 @@ export class HomeComponent implements OnInit {
     });
 
   }
+
+  
 
   signinWithFb() {
     let that = this;
@@ -76,7 +81,7 @@ export class HomeComponent implements OnInit {
       console.log(user);
       alert("successful rotate loader");
       that.isLoggedIn = true;
-
+      localStorage.setItem('loggedIn','true');
     });
 
     promise.catch(e => {
@@ -86,12 +91,13 @@ export class HomeComponent implements OnInit {
     });
 
   }
-
+  
 
   logout() {
     alert("logout");
     this.afAuth.auth.signOut();
     this.isLoggedIn = false;
+    localStorage.setItem('loggedIn','false');
   }
 
   signinClicked() {
@@ -195,12 +201,14 @@ export class HomeComponent implements OnInit {
     });
   }
   signinWithEmailPass() {
-
     let that = this;
     const promise = this.afAuth.auth.signInWithEmailAndPassword(this.loginForm.value["email"], this.loginForm.value["password"]).then(function (user) {
       console.log(user);
+      console.log(that.afAuth.auth.currentUser);
       that.isLoggedIn = true;
-
+      that.router.navigate(['/dashboard']);
+      localStorage.setItem('loggedIn','true');
+      
     });
 
     promise.catch(e => {
@@ -212,6 +220,15 @@ export class HomeComponent implements OnInit {
   }
 
 
-
+  userIsLoggedIn(){
+    if(this.afAuth.auth.currentUser)
+    {
+      alert("user logged in: ");
+      console.log(this.afAuth.auth.currentUser);
+      return true;
+    }
+    alert("not exists");
+    return false;
+  }
 
 }

@@ -1,3 +1,167 @@
-<p>
-  dashboard works!
-</p>
+<!--<div class="btn-group btn-group-justified" >
+  <button type="button" class="btn btn-primary">Kids' Events</button>
+  <button type="button" class="btn btn-primary">Providers</button>
+  <button type="button" class="btn btn-primary">Classes</button>
+</div>-->
+<!--<div class="btn-group btn-group-justified">
+  <a href="#" class="btn btn-default">Kids' Events</a>
+  <a href="#" class="btn btn-default">Providers</a>
+  <a href="#" class="btn btn-default">Classes</a>
+</div>-->
+
+
+<!--
+<ion-range-slider #sliderElement
+          type="double"
+          [min]="myMinVar"
+          max="100"
+          from="28"
+          from_min="10"
+          from_max="30"
+          from_shadow="true"
+          to="40"
+          to_min="40"
+          to_max="90"
+          to_shadow="true"
+          grid="true"
+          grid_num="10"
+          prefix="Weight: "
+          postfix=" million pounds"
+          decorate_both="false"
+          (onUpdate)="myOnUpdate($event)"
+          (onChange)="myOnChange($event)"
+          (onFinish)="myOnFinish($event)"></ion-range-slider>
+-->
+
+
+
+<div class="btn-group btn-group-justified">
+  <a href="#" class="btn btn-info">Kids' Events</a>
+  <a href="#" class="btn btn-success">Providers</a>
+  <a href="#" class="btn btn-warning">Classes</a>
+</div>
+
+
+<div class="content" style="display:flex;justify-content:space-between;">
+  <div class="left">
+    <!--<div style="width:500px;">-->
+    <ion-range-slider #sliderElement width="500px" min="0" max="10" grid="true" grid_num="10" (onChange)="myOnChange($event)"></ion-range-slider>
+    <!--</div>-->
+    <div *ngFor="let location of locations">
+      {{location}}
+    </div>
+
+    <div *ngFor="let age of ages">
+      {{age}}
+    </div>
+    <div *ngFor="let category of categories">
+      {{category}}
+    </div>
+  </div>
+
+  <div class="right">
+    <div *ngFor="let event of allEvents" class="col-sm-10 ">
+      <b>Title</b>{{event.title}}
+
+      <span style="font-size: 13px" [innerHTML]="event.description"></span>
+    </div>
+  </div>
+</div>
+
+
+
+<!--<div class="row">
+  <div class="col-md-6">Total cost</div>
+  <div class="col-md-6 text-right">$42</div>
+</div>-->
+
+<!--
+
+{
+  "id": "d3b0c429b35c045f1be96aa79de02a8c",
+  "city": "Delhi",
+  "title": "An Evening walk with Djinns of Ferozshah Kotla Fort",
+  "description": "<p>&nbsp;DAY, DATE &amp; TIME: Sunday, 8th October, 05:00 PM - 07:00 PM MEETING POINT: Ferozshah Kotla Fort Ticket Counter, on Bahadur Shah Zafar Road, near the Times of India Office Building.</p>\n<p>CHARGES: Rs 300/person</p>\n<p>Children below 8 yrs are free and till 12 are charged 50%</p>\n<p>ESSENTIALS TO WEAR &amp; CARRY:</p>\n<p>1- The terrain sometimes involves climbing atop fort walls &amp; sometimes walking sedately on rolling grass, so preferably wear a pair of good walking shoes. Not that we will stop any flip-flop wearers from joining us!</p>\n<p>2- A bottle of drinking water.</p>\n<p>3- A cloth covering/cap for head.</p>\n<p>4- A camera for capturing the 'monumental' ruins</p>\n<p>BEST WAY TO REACH:</p>\n<p>Nearest Metro Station is ITO Station on Violet Line (Faridabad track) OR Pragati Maidan station on Blue Line (Dwarka Track) and a 1.5 KM Auto-rickshaw ride will bring you to the Fort. Those driving in can easily park their vehicles as there is ample parking space.</p>",
+  "img_url": "https://lh3.googleusercontent.com/Hm4dMklh0yQDFmVKDZf5vFrtfuIEUeUJ27s1u1NemT7TPJnj_hN_yDCxWLMiXSPDN80hhh_c-7piWUNrxKdMYZc",
+  "upcoming_occurrences": [
+    {
+      "occurrence_id": 36286976,
+      "date": "2017-10-08:12-00",
+      "start_time": "17:00:00",
+      "end_time": "19:00:00",
+      "end_date": "2017-10-08:12-00",
+      "single_occurrence": 1,
+      "timezone": "Asia/Calcutta",
+      "enable_ticketing": true
+    }
+  ],
+  "url": "https://www.eventshigh.com/detail/Delhi/d3b0c429b35c045f1be96aa79de02a8c-An-Evening-walk-with-Djinns?src=eh-test",
+  "cats": [
+    "outdoors",
+    "city walks and tours"
+  ],
+  "venue": {
+    "name": "Ferozeshah Kotla Ground",
+    "address": "Bahadur Shah Zafar Marg, Vikram Nagar New Delhi, Delhi 110002",
+    "lat": 28.637834,
+    "lon": 77.243209,
+    "city": "Delhi"
+  },
+  "price": [
+    {
+      "id": 3493403,
+      "eid": "d3b0c429b35c045f1be96aa79de02a8c",
+      "name": "Lets Explore",
+      "currency": "INR",
+      "value": 300,
+      "discount_pct": 0,
+      "discount_value": 0,
+      "validity_start": null,
+      "validity_end": null,
+      "note": "",
+      "capacity": 0,
+      "min_quantity": 1,
+      "is_multi": 0,
+      "is_individual": 1,
+      "date": "2017-10-08",
+      "time": "17:00:00",
+      "all_occurrences": 1,
+      "rank": 0,
+      "occurrence_id": 36286976,
+      "end_date": "2017-10-08",
+      "end_time": "19:00:00",
+      "donation_ticket": 0,
+      "extra_data": {},
+      "group_id": "7a1920d61156abc05a60135aefe8bc67",
+      "group_name": "Default",
+      "group_note": "",
+      "group_icon": "",
+      "is_valid": "Y",
+      "tax": {
+        "taxes": []
+      },
+      "occurrences": [
+        {
+          "date": "2017-10-08",
+          "time": "17:00:00",
+          "end_date": "2017-10-08",
+          "end_time": "19:00:00",
+          "occurrence_id": 36286976,
+          "group_id": "7a1920d61156abc05a60135aefe8bc67",
+          "is_valid": "Y",
+          "id": 3493403
+        }
+      ],
+      "convenience_fees": 0,
+      "cgst": 300,
+      "sgst": 300
+    }
+  ],
+  "booking_url": "https://ticketing.eventshigh.com/checkout.jsp?eid=d3b0c429b35c045f1be96aa79de02a8c&src=eh-test",
+  "booking_enquiry_url": "https://www.eventshigh.com/reqbook?eid=d3b0c429b35c045f1be96aa79de02a8c&src=eh-test"
+}
+
+
+
+
+-->
