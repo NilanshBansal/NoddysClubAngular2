@@ -1,9 +1,9 @@
-/**, *:before, *:after {
+*, *:before, *:after {
   box-sizing: border-box;
 }
-.outer-container{
+/*.outer-container{
   padding:30px;
-}
+}*/
 
 body {
   font-family: sans-serif;
@@ -14,7 +14,12 @@ body {
     padding: 60px;
   }
 }
-
+.content{
+  margin-top:40px; 
+}
+.topnav{
+  margin-top:10px;
+}
 .range-slider {
   margin: 60px 0 0 0%;
 }
@@ -100,4 +105,3 @@ input::-moz-focus-inner,
 input::-moz-focus-outer {
   border: 0;
 }
-*/

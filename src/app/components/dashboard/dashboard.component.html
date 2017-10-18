@@ -34,40 +34,42 @@
 -->
 
 
-
-<div class="btn-group btn-group-justified">
-  <a href="#" class="btn btn-info">Kids' Events</a>
-  <a href="#" class="btn btn-success">Providers</a>
-  <a href="#" class="btn btn-warning">Classes</a>
-</div>
-
-
-<div class="content" style="display:flex;justify-content:space-between;">
-  <div class="left">
-    <!--<div style="width:500px;">-->
-    <ion-range-slider #sliderElement width="500px" min="0" max="10" grid="true" grid_num="10" (onChange)="myOnChange($event)"></ion-range-slider>
-    <!--</div>-->
-    <div *ngFor="let location of locations">
-      {{location}}
-    </div>
-
-    <div *ngFor="let age of ages">
-      {{age}}
-    </div>
-    <div *ngFor="let category of categories">
-      {{category}}
-    </div>
+<div class="container" style="display:flex;flex-direction:column;justify-content:space-around;">
+  <div class="btn-group btn-group-justified topnav">
+    <a href="#" class="btn btn-info">Kids' Events</a>
+    <a href="#" class="btn btn-success">Providers</a>
+    <a href="#" class="btn btn-warning">Classes</a>
   </div>
 
-  <div class="right">
-    <div *ngFor="let event of allEvents" class="col-sm-10 ">
-      <b>Title</b>{{event.title}}
 
-      <span style="font-size: 13px" [innerHTML]="event.description"></span>
+  <div class="content" style="display:flex;width:100%">
+    <!--<div class="left col-sm-2">-->
+      <div class="side-bar col-xs-3">
+      <!--<div style="width:500px;">-->
+      <ion-range-slider #sliderElement width="500px" min="0" max="10" grid="true" grid_num="10" (onChange)="myOnChange($event)"></ion-range-slider>
+      <!--</div>-->
+      <div *ngFor="let location of locations">
+        {{location}}
+      </div>
+      <br><br>
+      <div *ngFor="let age of ages">
+        {{age}}
+      </div>
+      <div *ngFor="let category of categories">
+        {{category}}
+      </div>
+    </div>
+
+    <!--<div class="right col-sm-10 flexArea" style="display:flex;flex-direction:column;">-->
+      <div class="col-xs-9" style="display:flex;flex-direction:column;">
+      <div *ngFor="let key of objectKeys(allEvents)">
+        <b>Title</b>{{allEvents[key].title}}
+
+        <span style="font-size: 13px" [innerHTML]="allEvents[key].description"></span>
+      </div>
     </div>
   </div>
 </div>
-
 
 
 <!--<div class="row">

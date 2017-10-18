@@ -2,10 +2,13 @@ body, html{
    padding: 0;
    width: 100vw;
    height: 100vh;
+   max-width: 100%;
+        overflow-x: hidden;
  }
+   
 
 .component{
-
+ 
   height:100%;
 }
 
