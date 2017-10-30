@@ -3,6 +3,9 @@ import { Http } from '@angular/http';
 import { FirebaseService } from "../../services/firebase.service";
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
+import * as moment from 'moment';
+import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -13,11 +16,20 @@ import { Observable } from 'rxjs/Observable';
 export class DashboardComponent implements OnInit {
 
   constructor(private http: Http,
-              private fs:FirebaseService
+              private fs:FirebaseService,
+              public fb:FormBuilder
              ) { }
+             
+  locationsForm: FormGroup;
+  agesForm: FormGroup;
+  categoriesForm: FormGroup;
+  
   allData;
   objectKeys = Object.keys;
   allEvents={};
+  td=new Date();
+  months=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  todaysDate= this.td.getDate() +  this.months[this.td.getMonth()]  + this.td.getFullYear() ; 
   city="delhi";
   locations;
   ages;
@@ -38,6 +50,9 @@ export class DashboardComponent implements OnInit {
     this.fs.findItems("locations").subscribe(data=>{
       console.log(data);
       this.locations=data;
+      // this.locationsForm=this.fb.group({
+
+      // });
     });
 
      
@@ -63,6 +78,10 @@ export class DashboardComponent implements OnInit {
   myOnChange(event){
     console.log(event);
     console.log(event.from);
+  }
+
+  openViewEvent(){
+    
   }
 
 }

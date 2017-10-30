@@ -11,6 +11,10 @@ import {Component,OnInit} from '@angular/core';
           <ng-content select=".app-modal-header"></ng-content>
         </div>
         <div class="modal-body">
+        <span><strong>{{keyname}}</strong></span>
+        
+        <span style="font-size: 13px" [innerHTML]="allEvents[keyname].description"></span>
+        
           <ng-content select=".app-modal-body"></ng-content>
         </div>
         <div class="modal-footer">
@@ -25,8 +29,15 @@ export class ModalComponent {
 
   public visible = false;
   public visibleAnimate = false;
-
-  public show(): void {
+  public keyname;
+  public allEvents={};
+  public show(key,allEvents): void {
+    this.keyname=key;
+    this.allEvents=allEvents;
+    
+    console.log(this.allEvents);
+    
+    console.log("ptani");
     this.visible = true;
     setTimeout(() => this.visibleAnimate = true, 100);
   }

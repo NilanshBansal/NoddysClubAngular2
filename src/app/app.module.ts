@@ -14,7 +14,7 @@ import { HttpModule } from '@angular/http';
 import { DashboardComponent } from "./components/dashboard/dashboard.component";
 import { AuthService } from "./services/auth.service";
 import { IonRangeSliderModule } from "ng2-ion-range-slider";
-
+import { MomentModule } from 'angular2-moment';
 import * as $ from 'jquery';
 export const firebaseConfig = {
   
@@ -43,6 +43,7 @@ const appRoutes:Routes=[
   ],
   imports: [
     BrowserModule,
+    MomentModule,
     AngularFireModule.initializeApp(firebaseConfig),
     RouterModule.forRoot(appRoutes),
     AngularFireDatabaseModule,
