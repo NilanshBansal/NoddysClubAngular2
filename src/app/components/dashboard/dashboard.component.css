@@ -106,6 +106,15 @@ input::-moz-focus-outer {
   border: 0;
 }
 
+.modal-dialog{
+  overflow-y: initial !important
+}
+.modal-body{
+  height: 250px;
+  overflow-y: auto;
+}
+
+
 /* THEME.CSS */
 html {
   text-rendering: optimizeLegibility !important;

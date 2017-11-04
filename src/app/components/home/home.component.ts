@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
     this.loginForm = this.fb.group({
+      
       email: ['', Validators.required],
       password: ['', Validators.required]
     });
@@ -76,7 +77,6 @@ export class HomeComponent implements OnInit {
 
   signinWithFb() {
     let that = this;
-    alert("hello fb");
     const promise = this.afAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider()).then(function (user) {
       console.log(user);
       alert("successful rotate loader");
@@ -105,11 +105,10 @@ export class HomeComponent implements OnInit {
     signupbtn.className = "";
     let signinbtn = document.getElementById("signInLi");
     signinbtn.className = "active";
-
     if (this.signupVar == true) {
       let earlierEmail = this.loginForm.value["email"];
       let earlierPassword = this.loginForm.value["password"];
-      this.signupVar = false;
+       this.signupVar = false;
       this.loginForm = this.fb.group({
         email: [earlierEmail, Validators.required],
         password: [earlierPassword, Validators.required]
@@ -127,7 +126,14 @@ export class HomeComponent implements OnInit {
     let earlierPassword = "";
     let earlierConfirmPassword = "";
     let earliername="";
+    let earlieraddress="";
+    let earlierpin="";
+    let earlierphone="";
+    console.log(this.signupForm);
     if (this.signupForm) {
+      earlieraddress=this.signupForm.value["address"];
+      earlierpin=this.signupForm.value["pin"];
+      earlierphone=this.signupForm.value["phone"];
       earliername=this.signupForm.value["name"];
       earlierEmail = this.signupForm.value["email"];
       earlierPassword = this.signupForm.value["password"];
@@ -137,6 +143,9 @@ export class HomeComponent implements OnInit {
     if (this.signupVar == false) {
     this.signupVar = true;
       this.signupForm = this.fb.group({
+        address:[earlieraddress,Validators.required],
+        pin:[earlierpin,Validators.required],
+        phone:[earlierphone,Validators.required],
         name:[earliername,[Validators.required,Validators.maxLength(30)]],
         email: [earlierEmail, Validators.required],
         pass:this.fb.group({
@@ -156,7 +165,6 @@ export class HomeComponent implements OnInit {
 };
 
   submitSignup() {
-    alert("hello hi");
     if (this.signupForm.value["password"] != this.signupForm.value["confirmPassword"]) {
       alert("Paaword not matched!");
       return;

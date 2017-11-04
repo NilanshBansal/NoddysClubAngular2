@@ -23,7 +23,8 @@ import {Component,OnInit} from '@angular/core';
       </div>
     </div>
   </div>
-  `
+  ` ,
+  styleUrls: ['./modal.component.css']
 })
 export class ModalComponent {
 
@@ -38,6 +39,10 @@ export class ModalComponent {
     console.log(this.allEvents);
     
     console.log("ptani");
+    this.visible = true;
+    setTimeout(() => this.visibleAnimate = true, 100);
+  }
+  public showReset(): void{
     this.visible = true;
     setTimeout(() => this.visibleAnimate = true, 100);
   }

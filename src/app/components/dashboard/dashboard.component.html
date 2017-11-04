@@ -47,10 +47,11 @@
 
       <a href="index.html" class="navbar-brand ">
         <span class="logo">
-          <strong>Noddy's Club</strong>
+          <!-- <strong>Noddy's Club</strong>
           <span class="handwriting"></span>
           <br />
-          <small>something that makes difference </small>
+          <small>something that makes difference </small> -->
+          <img src="assets/images/logo.png" height="80px">
         </span>
       </a>
 
@@ -126,9 +127,9 @@
 
                 <div class="col-sm-12 col-sm-offset-1">
                   <div class="input-group">
-                    <span class="input-group-addon input-group-addon-text hidden-xs">Find me a</span>
+                    <!-- <span class="input-group-addon input-group-addon-text hidden-xs">Find me a</span> -->
 
-                    <input type="text" class="form-control col-sm-3" placeholder="e.g. BMW, 2 bed flat, sofa ">
+                    <!-- <input type="text" class="form-control col-sm-3" placeholder="e.g. BMW, 2 bed flat, sofa ">
                     <div class=" input-group-addon hidden-xs">
                       <div class="btn-group">
                         <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown">
@@ -158,8 +159,8 @@
                             <a href="#">Services</a>
                           </li>
                         </ul>
-                      </div>
-                    </div>
+                      </div> 
+                    </div>-->
 
                   </div>
 
@@ -168,30 +169,61 @@
 
               </div>
             </div>
+            <!--  <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+ -->
 
+            <div class="collapse navbar-collapsed">
 
-            <div class="col-sm-4 col-xs-3" style="text-align: center">
-              <div class="row">
-                <div class="col-sm-11 pull-right">
-                  <button class="btn btn-primary search-btn">
-                    <i class="icon-search"></i>&nbsp;&nbsp;&nbsp;&nbsp;Search</button>
+              <ul class="nav navbar-nav navbar-right visible-xs">
+                <li class="active">
+                  <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="my_account.html">Login</a>
+                </li>
+                <li>
+                  <a href="register.html">Classes</a>
+                </li>
+                <li>
+                  <a href="listings.html">Listings</a>
+                </li>
+                <li>
+                  <a href="account_dashboard.html">My account</a>
+                </li>
+                <li>
+                  <a href="account_ad_create.html">Add Event</a>
+                </li>
+              </ul>
+              </div>
+              <div class="hidden-sm hidden-md hidden-lg col-xs-3" style="text-align: center">
+                <div class="row">
+                  <div class="col-sm-11 pull-right">
+                    <button class="btn btn-primary search-btn" data-toggle="collapse" data-target=".navbar-collapsed">
+                      <i class="fa fa-filter" aria-hidden="true" style="font-size: 25px;"></i></button>
+
+                  </div>
                 </div>
               </div>
+
+
             </div>
-
-
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
 
-<div class="container">
+  <div class="container">
 
-  <br><br>
-  <!-- <div class="row">
+    <br>
+    <br>
+    <!-- <div class="row">
     <div class="col-sm-12">
       <ol class="breadcrumb">
         <li>
@@ -209,12 +241,12 @@
 
 
 
-  <div class="row">
-    <div class="col-sm-4  hidden-xs">
-      <div class="sidebar ">
-        <div class="row ">
+    <div class="row">
+      <div class="col-sm-4  hidden-xs">
+        <div class="sidebar ">
+          <div class="row ">
 
-          <div class="col-sm-11 hidden-xs">
+            <!-- <div class="col-sm-11 hidden-xs">
             <a class="btn btn-primary pull-right" id="regionsBtn" style="width: 100%">Greater London
               <span class="caret"></span>
             </a>
@@ -699,622 +731,622 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div>-->
 
-        </div>
-        <br />
-
-        <div class="row ">
-
-
-          <div class="col-sm-11">
-
-            <div class="panel panel-default">
-              <div class="panel-heading">Filters</div>
-              <div class="panel-body">
-                <form class="form-inline mini" style="margin-bottom: 0px;">
-                  <fieldset>
-
-                    <div class="row filter-row">
-                      <div class="col-sm-6">
-                        <label>Make</label>
-                      </div>
-                      <div class="col-sm-6">
-                        <select class=" form-control ">
-                          <option>Any</option>
-                          <option>Alfa romeo</option>
-                          <option>Houses</option>
-                          <option>Flats/ Apartments</option>
-                          <option>Bungalows</option>
-                          <option>Land</option>
-                          <option>Commercial property</option>
-                          <option>Other</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div class="row filter-row">
-                      <div class="col-sm-6">
-                        <label>Mileage</label>
-                      </div>
-                      <div class="col-sm-6">
-                        <select class="col-sm-10 form-control ">
-                          <option>Any</option>
-                          <option>Alfa romeo</option>
-                          <option>Houses</option>
-                          <option>Flats/ Apartments</option>
-                          <option>Bungalows</option>
-                          <option>Land</option>
-                          <option>Commercial property</option>
-                          <option>Other</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div class="row filter-row">
-                      <div class="col-sm-6">
-                        <label>Seller type</label>
-                      </div>
-                      <div class="col-sm-6">
-                        <select class="col-sm-10 form-control ">
-                          <option>Any</option>
-                          <option>Alfa romeo</option>
-                          <option>Houses</option>
-                          <option>Flats/ Apartments</option>
-                          <option>Bungalows</option>
-                          <option>Land</option>
-                          <option>Commercial property</option>
-                          <option>Other</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row filter-row">
-                      <div class="col-sm-6">
-                        <label>Body type</label>
-                      </div>
-                      <div class="col-sm-6">
-                        <select class="col-sm-10 form-control ">
-                          <option>Any</option>
-                          <option>Alfa romeo</option>
-                          <option>Houses</option>
-                          <option>Flats/ Apartments</option>
-                          <option>Bungalows</option>
-                          <option>Land</option>
-                          <option>Commercial property</option>
-                          <option>Other</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row filter-row">
-                      <div class="col-sm-6">
-                        <label>Fuel type</label>
-                      </div>
-                      <div class="col-sm-6">
-                        <select class="col-sm-10 form-control ">
-                          <option>Any</option>
-                          <option>Alfa romeo</option>
-                          <option>Houses</option>
-                          <option>Flats/ Apartments</option>
-                          <option>Bungalows</option>
-                          <option>Land</option>
-                          <option>Commercial property</option>
-                          <option>Other</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="row filter-row">
-                      <div class="col-sm-6">
-                        <label>Age</label>
-                      </div>
-                      <div class="col-sm-6">
-                        <select class="col-sm-10 form-control ">
-                          <option>Any</option>
-                          <option>Alfa romeo</option>
-                          <option>Houses</option>
-                          <option>Flats/ Apartments</option>
-                          <option>Bungalows</option>
-                          <option>Land</option>
-                          <option>Commercial property</option>
-                          <option>Other</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div class="row filter-row">
-                      <div class="col-sm-12">
-                        <label>Price range</label>
-                      </div>
-                      <div class="col-sm-6">
-                        <div class="input-group">
-                          <span class="input-group-addon">$</span>
-                          <input type="email" class="form-control price-input" placeholder="min" />
-                        </div>
-                      </div>
-                      <div class="col-sm-6">
-                        <div class="input-group">
-                          <span class="input-group-addon">$</span>
-                          <input type="email" class="form-control price-input" placeholder="max" />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row filter-row">
-                      <div class="col-sm-12">
-                        <label>Search only:</label>
-                      </div>
-                      <div class="col-sm-12">
-                        <div class="radio">
-                          <label>
-                            <input type="radio" name="optionsRadios" value="option1" checked> Urgent ads
-                          </label>
-                        </div>
-                        <br />
-
-                        <div class="radio">
-                          <label>
-                            <input type="radio" name="optionsRadios" value="option2"> Featured ads
-                          </label>
-                        </div>
-                        <br />
-
-                        <div class="radio">
-                          <label>
-                            <input type="radio" name="optionsRadios" value="option2"> Only ads with pictures
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row filter-row">
-
-                      <div class="col-sm-2 pull-right" style="margin-top: 10px;">
-                        <button class="btn btn-primary pull-right" type="submit">Update results</button>
-
-                      </div>
-                    </div>
-
-
-                  </fieldset>
-                </form>
-              </div>
+            <!-- <div _ngcontent-c1="" class=" input-group-addon hidden-xs"> -->
+            <div _ngcontent-c1="" class="btn-group">
+              <button _ngcontent-c1="" class="btn  dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
+                All categories
+                <span _ngcontent-c1="" class="caret"></span>
+              </button>
+              <ul _ngcontent-c1="" class="dropdown-menu" role="menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+                <li _ngcontent-c1="">
+                  <a _ngcontent-c1="" href="#">Cars, Vans &amp; Motorbikes</a>
+                </li>
+                <li _ngcontent-c1="">
+                  <a _ngcontent-c1="" href="#">Community</a>
+                </li>
+                <li _ngcontent-c1="">
+                  <a _ngcontent-c1="" href="#">Flats &amp; Houses</a>
+                </li>
+                <li _ngcontent-c1="">
+                  <a _ngcontent-c1="" href="#">For Sale</a>
+                </li>
+                <li _ngcontent-c1="">
+                  <a _ngcontent-c1="" href="#">Jobs</a>
+                </li>
+                <li _ngcontent-c1="">
+                  <a _ngcontent-c1="" href="#">Pets</a>
+                </li>
+                <li _ngcontent-c1="">
+                  <a _ngcontent-c1="" href="#">Services</a>
+                </li>
+              </ul>
             </div>
+            <!-- </div> -->
+
 
 
           </div>
-        </div>
+          <br />
+
+          <div class="row ">
 
 
-        <div class="row ">
-          <div class="col-sm-11">
-            <div class="panel panel-default">
-              <div class="panel-heading">Refine category</div>
-              <div class="panel-body">
-                <ul class="nav nav-category">
-                  <li>
-                    <a class="active" href="category.html">All categories</a>
-                    <ul>
-                      <li>
-                        <a href="listings.html">Cars, Vans & Motorbikes</a>
-                        <ul>
-                          <li>
-                            <a class="active" href="listings.html">Cars</a>
-                            <ul>
-                              <li>
-                                <a class="active" href="listings.html">
-                                  <strong>Porsche</strong>
-                                </a> (66)
-                                <a href="#" class="remove-category">
-                                  <i class="fa fa-times"></i>
-                                </a>
-                              </li>
-                            </ul>
-                          </li>
+            <div class="col-sm-11">
 
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+              <div class="panel panel-default">
+                <div class="panel-heading">Filters</div>
+                <div class="panel-body">
+                  <form class="form-inline mini" style="margin-bottom: 0px;">
+                    <fieldset>
 
+                      <div class="row filter-row">
+                        <div class="col-sm-6">
+                          <label style="font-weight: 500;">Locations</label>
+                        </div>
+                        <div class="col-sm-6">
+                          <select class=" form-control ">
+                            <option *ngFor="let location of locations">{{location}}</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="row filter-row">
+                        <div class="col-sm-6">
+                          <label style="font-weight: 500;">Categories</label>
+                        </div>
+                        <div class="col-sm-6">
+                          <select class="col-sm-10 form-control ">
+                            <option *ngFor="let category of categories">{{category}}</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="row filter-row">
+                        <div class="col-sm-6">
+                          <label style="font-weight: 500;">Ages</label>
+                        </div>
+                        <div class="col-sm-6">
+                          <select class="col-sm-10 form-control ">
+                            <option *ngFor="let age of ages">{{age}}</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="row filter-row">
+                        <div class="col-sm-6">
+                          <label style="font-weight: 500;">Date</label>
+                        </div>
+                        <div class="col-sm-6">
+                          <!-- <select class="col-sm-10 form-control ">
+                          <option>Any</option>
+                          <option>Alfa romeo</option>
+                          <option>Houses</option>
+                          <option>Flats/ Apartments</option>
+                          <option>Bungalows</option>
+                          <option>Land</option>
+                          <option>Commercial property</option>
+                          <option>Other</option>
+                        </select> -->
+                          <input type="date" class="col-sm-10 form-control ">
+                        </div>
+                      </div>
+
+                      <div class="row filter-row">
+                        <div class="col-sm-12">
+                          <label>Price range</label>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">$</span>
+                            <input type="email" class="form-control price-input" placeholder="min" />
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <span class="input-group-addon">$</span>
+                            <input type="email" class="form-control price-input" placeholder="max" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row filter-row">
+                        <div class="col-sm-12">
+                          <label>Search only:</label>
+                        </div>
+                        <div class="col-sm-12">
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="optionsRadios" value="option1" checked> Urgent ads
+                            </label>
+                          </div>
+                          <br />
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="optionsRadios" value="option2"> Featured ads
+                            </label>
+                          </div>
+                          <br />
+
+                          <div class="radio">
+                            <label>
+                              <input type="radio" name="optionsRadios" value="option2"> Only ads with pictures
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row filter-row">
+
+                        <div class="col-sm-2 pull-right" style="margin-top: 10px;">
+                          <button class="btn btn-primary pull-right" type="submit">Update results</button>
+
+                        </div>
+                      </div>
+
+
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+
+          <div class="row ">
+            <div class="col-sm-11">
+              <div class="panel panel-default">
+                <div class="panel-heading">Refine category</div>
+                <div class="panel-body">
+                  <ul class="nav nav-category">
+                    <li>
+                      <a class="active" href="category.html">All categories</a>
+                      <ul>
+                        <li>
+                          <a href="listings.html">Cars, Vans & Motorbikes</a>
+                          <ul>
+                            <li>
+                              <a class="active" href="listings.html">Cars</a>
+                              <ul>
+                                <li>
+                                  <a class="active" href="listings.html">
+                                    <strong>Porsche</strong>
+                                  </a> (66)
+                                  <a href="#" class="remove-category">
+                                    <i class="fa fa-times"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                            </li>
+
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="row ">
-          <div class="col-sm-11">
-            <div class="panel panel-default">
-              <div class="panel-heading">Refine category</div>
-              <div class="panel-body">
+          <div class="row ">
+            <div class="col-sm-11">
+              <div class="panel panel-default">
+                <div class="panel-heading">Refine category</div>
+                <div class="panel-body">
 
-                <div class="property">
-                  <a href="#AC+Cobra">AC Cobra</a>
-                </div>
-                <div class="property">
-                  <a href="#Acura">Acura</a>
-                </div>
-                <div class="property">
-                  <a href="#Alfa+Romeo">Alfa Romeo</a>
-                </div>
-                <div class="property">
-                  <a href="#American+Motors">American Motors</a>
-                </div>
-                <div class="property">
-                  <a href="#Aston+Martin">Aston Martin</a>
-                </div>
-                <div class="more" id="more_make_link">
-                  <a href="#" class="more link-info" id="more_make">More ...</a>
-                </div>
-                <div id="more_make_list" style="display: none;">
                   <div class="property">
-                    <a href="#Audi">Audi</a>
+                    <a href="#AC+Cobra">AC Cobra</a>
+                  </div>
+                  <div class="property">
+                    <a href="#Acura">Acura</a>
+                  </div>
+                  <div class="property">
+                    <a href="#Alfa+Romeo">Alfa Romeo</a>
+                  </div>
+                  <div class="property">
+                    <a href="#American+Motors">American Motors</a>
+                  </div>
+                  <div class="property">
+                    <a href="#Aston+Martin">Aston Martin</a>
+                  </div>
+                  <div class="more" id="more_make_link">
+                    <a href="#" class="more link-info" id="more_make">More ...</a>
+                  </div>
+                  <div id="more_make_list" style="display: none;">
+                    <div class="property">
+                      <a href="#Audi">Audi</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Austin+Healey">Austin Healey</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Avanti">Avanti</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Bentley">Bentley</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Bitter">Bitter</a>
+                    </div>
+                    <div class="property">
+                      <a href="#BMW">BMW</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Bricklin">Bricklin</a>
+                    </div>
+                    <div class="property">
+                      <a href="#British+Leyland">British Leyland</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Bugatti">Bugatti</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Buick">Buick</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Cadillac">Cadillac</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Caterham">Caterham</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Chevrolet">Chevrolet</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Chrysler">Chrysler</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Citroen">Citroen</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Daewoo">Daewoo</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Daihatsu">Daihatsu</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Dodge">Dodge</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Eagle">Eagle</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Ferrari">Ferrari</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Fiat">Fiat</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Ford">Ford</a>
+                    </div>
+                    <div class="property">
+                      <a href="#FUJI+HEAVY+IND">FUJI HEAVY IND</a>
+                    </div>
+                    <div class="property">
+                      <a href="#General+Motors">General Motors</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Geo">Geo</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Ginetta">Ginetta</a>
+                    </div>
+                    <div class="property">
+                      <a href="#GMC">GMC</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Holden">Holden</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Honda">Honda</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Hummer">Hummer</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Hyundai">Hyundai</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Infiniti">Infiniti</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Isuzu">Isuzu</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Jaguar">Jaguar</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Jeep">Jeep</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Jensen">Jensen</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Kaiser">Kaiser</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Kia">Kia</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Lada">Lada</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Laforza">Laforza</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Lamborghini">Lamborghini</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Lancia">Lancia</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Land+Rover">Land Rover</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Lexus">Lexus</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Lincoln">Lincoln</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Lotus">Lotus</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Maserati">Maserati</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Matra">Matra</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Maybach">Maybach</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Mazda">Mazda</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Mercedes-Benz">Mercedes-Benz</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Mercury">Mercury</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Merkur">Merkur</a>
+                    </div>
+                    <div class="property">
+                      <a href="#MG">MG</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Mini">Mini</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Mitsubishi">Mitsubishi</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Morgan">Morgan</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Nissan">Nissan</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Oldsmobile">Oldsmobile</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Opel">Opel</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Peugeot">Peugeot</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Plymouth">Plymouth</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Pontiac">Pontiac</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Porsche">Porsche</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Renault">Renault</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Rolls-Royce">Rolls-Royce</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Rover">Rover</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Saab">Saab</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Saturn">Saturn</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Scion">Scion</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Skoda">Skoda</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Smart">Smart</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Studebaker">Studebaker</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Subaru">Subaru</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Suzuki">Suzuki</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Tatra">Tatra</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Toyota">Toyota</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Trabant">Trabant</a>
+                    </div>
+                    <div class="property">
+                      <a href="#TVR">TVR</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Vauxhall">Vauxhall</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Volkswagen">Volkswagen</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Volvo">Volvo</a>
+                    </div>
+                    <div class="property">
+                      <a href="#Yugo">Yugo</a>
+                    </div>
+                    <div class="more">
+                      <a id="less_make" href="#" class="more link-info">Less ...</a>
+                    </div>
                   </div>
-                  <div class="property">
-                    <a href="#Austin+Healey">Austin Healey</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Avanti">Avanti</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Bentley">Bentley</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Bitter">Bitter</a>
-                  </div>
-                  <div class="property">
-                    <a href="#BMW">BMW</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Bricklin">Bricklin</a>
-                  </div>
-                  <div class="property">
-                    <a href="#British+Leyland">British Leyland</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Bugatti">Bugatti</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Buick">Buick</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Cadillac">Cadillac</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Caterham">Caterham</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Chevrolet">Chevrolet</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Chrysler">Chrysler</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Citroen">Citroen</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Daewoo">Daewoo</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Daihatsu">Daihatsu</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Dodge">Dodge</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Eagle">Eagle</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Ferrari">Ferrari</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Fiat">Fiat</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Ford">Ford</a>
-                  </div>
-                  <div class="property">
-                    <a href="#FUJI+HEAVY+IND">FUJI HEAVY IND</a>
-                  </div>
-                  <div class="property">
-                    <a href="#General+Motors">General Motors</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Geo">Geo</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Ginetta">Ginetta</a>
-                  </div>
-                  <div class="property">
-                    <a href="#GMC">GMC</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Holden">Holden</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Honda">Honda</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Hummer">Hummer</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Hyundai">Hyundai</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Infiniti">Infiniti</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Isuzu">Isuzu</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Jaguar">Jaguar</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Jeep">Jeep</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Jensen">Jensen</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Kaiser">Kaiser</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Kia">Kia</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Lada">Lada</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Laforza">Laforza</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Lamborghini">Lamborghini</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Lancia">Lancia</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Land+Rover">Land Rover</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Lexus">Lexus</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Lincoln">Lincoln</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Lotus">Lotus</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Maserati">Maserati</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Matra">Matra</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Maybach">Maybach</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Mazda">Mazda</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Mercedes-Benz">Mercedes-Benz</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Mercury">Mercury</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Merkur">Merkur</a>
-                  </div>
-                  <div class="property">
-                    <a href="#MG">MG</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Mini">Mini</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Mitsubishi">Mitsubishi</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Morgan">Morgan</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Nissan">Nissan</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Oldsmobile">Oldsmobile</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Opel">Opel</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Peugeot">Peugeot</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Plymouth">Plymouth</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Pontiac">Pontiac</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Porsche">Porsche</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Renault">Renault</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Rolls-Royce">Rolls-Royce</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Rover">Rover</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Saab">Saab</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Saturn">Saturn</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Scion">Scion</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Skoda">Skoda</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Smart">Smart</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Studebaker">Studebaker</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Subaru">Subaru</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Suzuki">Suzuki</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Tatra">Tatra</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Toyota">Toyota</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Trabant">Trabant</a>
-                  </div>
-                  <div class="property">
-                    <a href="#TVR">TVR</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Vauxhall">Vauxhall</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Volkswagen">Volkswagen</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Volvo">Volvo</a>
-                  </div>
-                  <div class="property">
-                    <a href="#Yugo">Yugo</a>
-                  </div>
-                  <div class="more">
-                    <a id="less_make" href="#" class="more link-info">Less ...</a>
-                  </div>
-                </div>
 
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="row ">
-          <div class="col-sm-11">
-            <div class="panel panel-default">
-              <div class="panel-heading">Location</div>
-              <div class="panel-body">
-                <ul class="nav">
-                  <li>
-                    <a class="active" href="category.html">Greater London (12)</a>
-                    <ul>
-                      <li>
-                        <a href="listings.html"> - Central London (11)</a>
-                      </li>
-                      <li>
-                        <a class="active" href="listings.html"> - East London (1)</a>
-                      </li>
-                      <li>
-                        <a class="active" href="listings.html"> - North London (1)</a>
-                      </li>
-                      <li>
-                        <a class="active" href="listings.html"> - North London (1)</a>
-                      </li>
-                      <li>
-                        <a class="active" href="listings.html"> - North West London (1)</a>
-                      </li>
-                      <li>
-                        <a class="active" href="listings.html"> - South East London (1)</a>
-                      </li>
-                      <li>
-                        <a class="active" href="listings.html"> - South West London (1)</a>
-                      </li>
-                      <li>
-                        <a class="active" href="listings.html"> - West London (1)</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a href="category.html">Brighton (5)</a>
-                  </li>
-                  <li>
-                    <a href="category.html">Cambridge (2)</a>
-                  </li>
-                  <li>
-                    <a href="category.html">Essex (2)</a>
-                  </li>
-                  <li>
-                    <a href="category.html">Guildford (2)</a>
-                  </li>
-                  <li>
-                    <a href="category.html">Kent (2)</a>
-                  </li>
-                  <li>
-                    <a href="category.html">Luton (2)</a>
-                  </li>
-                  <li>
-                    <a href="category.html">Milton Keynes (2)</a>
-                  </li>
-                  <li>
-                    <a href="category.html">Oxford (2)</a>
-                  </li>
-                  <li>
-                    <a href="category.html">Reading (2)</a>
-                  </li>
-                </ul>
+          <div class="row ">
+            <div class="col-sm-11">
+              <div class="panel panel-default">
+                <div class="panel-heading">Location</div>
+                <div class="panel-body">
+                  <ul class="nav">
+                    <li>
+                      <a class="active" href="category.html">Greater London (12)</a>
+                      <ul>
+                        <li>
+                          <a href="listings.html"> - Central London (11)</a>
+                        </li>
+                        <li>
+                          <a class="active" href="listings.html"> - East London (1)</a>
+                        </li>
+                        <li>
+                          <a class="active" href="listings.html"> - North London (1)</a>
+                        </li>
+                        <li>
+                          <a class="active" href="listings.html"> - North London (1)</a>
+                        </li>
+                        <li>
+                          <a class="active" href="listings.html"> - North West London (1)</a>
+                        </li>
+                        <li>
+                          <a class="active" href="listings.html"> - South East London (1)</a>
+                        </li>
+                        <li>
+                          <a class="active" href="listings.html"> - South West London (1)</a>
+                        </li>
+                        <li>
+                          <a class="active" href="listings.html"> - West London (1)</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="category.html">Brighton (5)</a>
+                    </li>
+                    <li>
+                      <a href="category.html">Cambridge (2)</a>
+                    </li>
+                    <li>
+                      <a href="category.html">Essex (2)</a>
+                    </li>
+                    <li>
+                      <a href="category.html">Guildford (2)</a>
+                    </li>
+                    <li>
+                      <a href="category.html">Kent (2)</a>
+                    </li>
+                    <li>
+                      <a href="category.html">Luton (2)</a>
+                    </li>
+                    <li>
+                      <a href="category.html">Milton Keynes (2)</a>
+                    </li>
+                    <li>
+                      <a href="category.html">Oxford (2)</a>
+                    </li>
+                    <li>
+                      <a href="category.html">Reading (2)</a>
+                    </li>
+                  </ul>
 
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
 
 
 
 
-      </div>
-    </div>
-
-    <div class="col-sm-8 pull-right listings">
-
-
-
-
-      <div class="row listing-row" style="margin-top: -10px;">
-        <div class="pull-left">
-          <strong>Today, Saturday 14th September</strong>
-        </div>
-        <div class="pull-right">
-          <span style="">Sort by:&nbsp;&nbsp;&nbsp;</span>
-          <a href="#" data-toggle="tooltip" data-placement="top" title="Sort from newest to oldest"> Date
-            <i class="fa fa-chevron-up"></i>
-          </a>
-          <a href="#" data-toggle="tooltip" data-placement="top" title="Sort from lowest price to highest price"> Price
-            <i class="fa fa-chevron-down"></i>
-          </a>
         </div>
       </div>
-      <div class="row premium listing-row" *ngFor="let key of objectKeys(allEvents)">
 
-        <!-- <div class="ribbon-wrapper-red">
+      <div class="col-sm-8 pull-right listings">
+
+
+
+
+        <div class="row listing-row" style="margin-top: -10px;">
+          <div class="pull-left">
+            <strong>Today, Saturday 14th September</strong>
+          </div>
+          <div class="pull-right">
+            <span style="">Sort by:&nbsp;&nbsp;&nbsp;</span>
+            <a href="#" data-toggle="tooltip" data-placement="top" title="Sort from newest to oldest"> Date
+              <i class="fa fa-chevron-up"></i>
+            </a>
+            <a href="#" data-toggle="tooltip" data-placement="top" title="Sort from lowest price to highest price"> Price
+              <i class="fa fa-chevron-down"></i>
+            </a>
+          </div>
+        </div>
+        <div class="row premium listing-row" *ngFor="let key of objectKeys(allEvents)">
+
+          <!-- <div class="ribbon-wrapper-red">
           <div class="ribbon-red">&nbsp;
             <span>Featured</span>
           </div>
         </div> -->
 
 
-        <div class="col-sm-10">
-          <h3>
-            <a class="" href="details.html"> {{allEvents[key].title}}
-              <strong>&pound;14,350</strong>
-            </a>
-          </h3>
-          <p class="muted">Located in
+          <div class="col-sm-10">
+            <h3>
+              <a class="" href="details.html" style="color:#333333;"> {{allEvents[key].title}}</a>
+
+
+            </h3>
+            <br>
+            <span>
+              <b>Price: </b>₹ {{allEvents[key].price[0]["value"]}}</span>
+            <br>
+            <span>
+              <b>Date: </b> {{allEvents[key].upcoming_occurrences[0]["date"].split(':')[0] | amParse:'YYYY-MM-DD' | amDateFormat:'LL'}}</span>
+            <br>
+            <span>
+              <b>Start Time: </b>{{(allEvents[key].upcoming_occurrences[0]["start_time"]| amParse:'hh:mm:ss' | amCalendar).split("at")[1]}}</span>
+            <br>
+            <span>
+              <b>End Time: </b>{{(allEvents[key].upcoming_occurrences[0]["end_time"]| amParse:'hh:mm:ss' | amCalendar).split("at")[1]}}</span>
+            <br>
+            <span>
+              <b>Venue: </b>{{allEvents[key].venue["name"] + allEvents[key].venue["address"]}}</span>
+            <br>
+
+            <br>
+            <button class="btn btn-primary" (click)="modal.show(key,allEvents)">View More</button>
+            <!-- <p class="muted">Located in
             <strong>Richmond, London</strong>
           </p>
           <p class="muted">Posted Feb 05, 2014 to
@@ -1330,19 +1362,19 @@
             <strong>2,696 cc</strong> |
 
             <strong>Diesel</strong>
-          </p>
-          <p>
-            <span class="classified_links pull-right">
-              <a class="link-info underline" href="#">Share</a>&nbsp;
-              <a class="link-info underline" href="#">Add to favorites</a>
-              &nbsp;
-              <a class="link-info underline" href="details.html">Details</a>&nbsp; &nbsp;
-              <a class="link-info underline" href="#">Contact</a>
-            </span>
-          </p>
+          </p> -->
+            <p>
+              <span class="classified_links pull-right">
+                <a class="link-info underline" href="#">Share</a>&nbsp;
+                <a class="link-info underline" href="#">Add to favorites</a>
+                &nbsp;
+                <a class="link-info underline" href="details.html">Details</a>&nbsp; &nbsp;
+                <a class="link-info underline" href="#">Contact</a>
+              </span>
+            </p>
+          </div>
         </div>
-      </div>
-      <!-- <div class="row premium listing-row">
+        <!-- <div class="row premium listing-row">
 
 
         <div class="col-sm-10">
@@ -1676,167 +1708,167 @@
       </div>
     </div> -->
 
-    <div>
-      <ul class="pagination pull-right">
-        <li>
-          <a href="#">Prev</a>
-        </li>
-        <li class="active">
-          <a href="#">1</a>
-        </li>
-        <li>
-          <a href="#">2</a>
-        </li>
-        <li>
-          <a href="#">3</a>
-        </li>
-        <li>
-          <a href="#">4</a>
-        </li>
-        <li>
-          <a href="#">5</a>
-        </li>
-        <li class="hidden-xs">
-          <a href="#">6</a>
-        </li>
-        <li class="hidden-xs">
-          <a href="#">7</a>
-        </li>
-        <li class="hidden-sm hidden-xs">
-          <a href="#">8</a>
-        </li>
-        <li class="hidden-sm hidden-xs">
-          <a href="#">9</a>
-        </li>
-        <li class="hidden-sm hidden-xs">
-          <a href="#">10</a>
-        </li>
-        <li>
-          <a href="#">Next</a>
-        </li>
-      </ul>
+        <div>
+          <ul class="pagination pull-right">
+            <li>
+              <a href="#">Prev</a>
+            </li>
+            <li class="active">
+              <a href="#">1</a>
+            </li>
+            <li>
+              <a href="#">2</a>
+            </li>
+            <li>
+              <a href="#">3</a>
+            </li>
+            <li>
+              <a href="#">4</a>
+            </li>
+            <li>
+              <a href="#">5</a>
+            </li>
+            <li class="hidden-xs">
+              <a href="#">6</a>
+            </li>
+            <li class="hidden-xs">
+              <a href="#">7</a>
+            </li>
+            <li class="hidden-sm hidden-xs">
+              <a href="#">8</a>
+            </li>
+            <li class="hidden-sm hidden-xs">
+              <a href="#">9</a>
+            </li>
+            <li class="hidden-sm hidden-xs">
+              <a href="#">10</a>
+            </li>
+            <li>
+              <a href="#">Next</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLogin" aria-hidden="true">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Sign in to your account</h4>
+          </div>
+          <div class="modal-body">
+            <p>If you have an account with us, please enter your details below.</p>
 
-  </div>
+            <form method="POST" action="account_dashboard.html" accept-charset="UTF-8" id="user-login-form" class="form ajax" data-replace=".error-message p">
 
-</div>
-<!-- Modal -->
-<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLogin" aria-hidden="true">
-  <div class="modal-dialog modal-md">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Sign in to your account</h4>
-      </div>
-      <div class="modal-body">
-        <p>If you have an account with us, please enter your details below.</p>
+              <div class="form-group">
+                <input placeholder="Your username/email" class="form-control" name="email" type="text"> </div>
 
-        <form method="POST" action="account_dashboard.html" accept-charset="UTF-8" id="user-login-form" class="form ajax" data-replace=".error-message p">
+              <div class="form-group">
+                <input placeholder="Your password" class="form-control" name="password" type="password" value=""> </div>
 
-          <div class="form-group">
-            <input placeholder="Your username/email" class="form-control" name="email" type="text"> </div>
+              <div class="row">
+                <div class="col-md-6">
 
-          <div class="form-group">
-            <input placeholder="Your password" class="form-control" name="password" type="password" value=""> </div>
+                </div>
+                <div class="col-md-6">
+                  <button type="submit" class="btn btn-primary pull-right">Login</button>
+                </div>
+              </div>
 
-          <div class="row">
-            <div class="col-md-6">
+              <div class="row">
+                <div class="col-md-12">
+                  <a data-toggle="modal" href="#modalForgot">Forgot your password?</a>
+                </div>
+              </div>
 
-            </div>
-            <div class="col-md-6">
-              <button type="submit" class="btn btn-primary pull-right">Login</button>
+            </form>
+          </div>
+
+          <div class="modal-footer" style="text-align: center">
+            <div class="error-message">
+              <p style="color: #000; font-weight: normal;">Don't have an account?
+                <a class="link-info" href="register.html">Register now</a>
+              </p>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-md-12">
-              <a data-toggle="modal" href="#modalForgot">Forgot your password?</a>
-            </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalForgot" tabindex="-1" role="dialog" aria-labelledby="modalForgot" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Forgot your password?</h4>
+          </div>
+          <div class="modal-body">
+            <p>Enter your email to continue</p>
+
+            <form role="form">
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Your email address">
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+                  <a href="my_account.html" class="btn btn-primary pull-right">Continue</a>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="footer">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-sm-4 col-xs-12">
+            <p>
+              <strong>&copy; Bootstrap Classifieds 2014</strong>
+            </p>
+            <p>All rights reserved</p>
           </div>
 
-        </form>
-      </div>
-
-      <div class="modal-footer" style="text-align: center">
-        <div class="error-message">
-          <p style="color: #000; font-weight: normal;">Don't have an account?
-            <a class="link-info" href="register.html">Register now</a>
-          </p>
+          <div class="col-sm-8 col-xs-12">
+            <p class="footer-links">
+              <a href="index.html" class="active">Home</a>
+              <a href="typography.html">Typography</a>
+              <a href="terms.html">Terms and Conditions</a>
+              <a href="contact.html">Contact Us</a>
+            </p>
+          </div>
         </div>
       </div>
-
     </div>
-    <!-- /.modal-content -->
-  </div>
-  <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
-
-
-<!-- Modal -->
-<div class="modal fade" id="modalForgot" tabindex="-1" role="dialog" aria-labelledby="modalForgot" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Forgot your password?</h4>
-      </div>
-      <div class="modal-body">
-        <p>Enter your email to continue</p>
-
-        <form role="form">
-          <div class="form-group">
-            <input type="email" class="form-control" placeholder="Your email address">
-          </div>
-
-          <div class="row">
-            <div class="col-md-6">
-
-            </div>
-            <div class="col-md-6">
-              <a href="my_account.html" class="btn btn-primary pull-right">Continue</a>
-            </div>
-          </div>
-        </form>
-
-      </div>
-    </div>
-    <!-- /.modal-content -->
-  </div>
-  <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
-
-<div class="footer">
-  <div class="container">
-
-    <div class="row">
-
-      <div class="col-sm-4 col-xs-12">
-        <p>
-          <strong>&copy; Bootstrap Classifieds 2014</strong>
-        </p>
-        <p>All rights reserved</p>
-      </div>
-
-      <div class="col-sm-8 col-xs-12">
-        <p class="footer-links">
-          <a href="index.html" class="active">Home</a>
-          <a href="typography.html">Typography</a>
-          <a href="terms.html">Terms and Conditions</a>
-          <a href="contact.html">Contact Us</a>
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
 
 
 
-<!-- <div class="container">
+    <!-- <div class="container">
   <div class="btn-group btn-group-justified topnav">
     <a href="#" class="btn btn-info">Kids' Events</a>
     <a href="#" class="btn btn-success">Providers</a>
@@ -1874,10 +1906,10 @@
 
     <div class="col-xs-9 col-sm-9">
       <div class="well" *ngFor="let key of objectKeys(allEvents)" style="background-color: wheat;"> -->
-<!-- <div class=".left" style="display:flex;justify-content:center">
+    <!-- <div class=".left" style="display:flex;justify-content:center">
           <img src={{allEvents[key].img_url}} height="250px" width="250px">
         </div> -->
-<!-- <div class=".right">
+    <!-- <div class=".right">
           <b>Title: </b>{{allEvents[key].title}}
           <br>
           <span>
@@ -1904,33 +1936,33 @@
     </div>
   </div> -->
 
-<app-modal #modal>
-  <div class="app-modal-header">
+    <app-modal #modal>
+      <div class="app-modal-header">
 
 
-  </div>
-  <div class="app-modal-body">
-
-    <div class="remodal">
-      <div class="reset-password-modal--info">
-        <div class="reset-password-modal--header">
-          Reset Your Password
-        </div>
-        <div class="reset-password-modal--description">
-          Please provide the email address you used when you signed up for your Noddy's Club account.
-          <br>
-          <br> We will send you an email with a link to reset your password.
-        </div>
       </div>
+      <div class="app-modal-body">
 
-      <span style="font-size: 13px">hello{{keyname}}</span>
-    </div>
+        <div class="remodal">
+          <div class="reset-password-modal--info">
+            <div class="reset-password-modal--header">
+              Reset Your Password
+            </div>
+            <div class="reset-password-modal--description">
+              Please provide the email address you used when you signed up for your Noddy's Club account.
+              <br>
+              <br> We will send you an email with a link to reset your password.
+            </div>
+          </div>
 
-  </div>
-  <div class="app-modal-footer">
-    <button type="button" class="btn btn-default" (click)="modal.hide()">Close</button>
-  </div>
-</app-modal>
+          <span style="font-size: 13px">hello{{keyname}}</span>
+        </div>
+
+      </div>
+      <div class="app-modal-footer">
+        <button type="button" class="btn btn-default" (click)="modal.hide()">Close</button>
+      </div>
+    </app-modal>
 
 
 
@@ -1940,13 +1972,13 @@
 
 
 
-<!-- Bootstrap core CSS -->
-<!-- <link id="switch_style" href="../../../WB0C342C2/css/bootstrap.css" rel="stylesheet"> -->
+    <!-- Bootstrap core CSS -->
+    <!-- <link id="switch_style" href="../../../WB0C342C2/css/bootstrap.css" rel="stylesheet"> -->
 
 
 
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
         <script src="../../assets/js/html5shiv.js"></script>
         <script src="../../assets/js/respond.min.js"></script>
         <![endif]-->
@@ -1966,7 +1998,7 @@
 
 
 
-<!--
+    <!--
 
 {
   "id": "d3b0c429b35c045f1be96aa79de02a8c",

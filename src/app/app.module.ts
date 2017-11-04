@@ -29,8 +29,10 @@ export const firebaseConfig = {
 };
 
 const appRoutes:Routes=[
-  {path:'',component:HomeComponent},
-  {path:'dashboard',component:DashboardComponent,canActivate:[AuthService]},
+  /* {path:'',component:HomeComponent},
+  {path:'dashboard',component:DashboardComponent,canActivate:[AuthService]}, */
+  {path:'',component:DashboardComponent},
+  {path:'login',component:HomeComponent},
 ]
 
 @NgModule({
