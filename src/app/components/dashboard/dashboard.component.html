@@ -91,7 +91,7 @@
             <a href="register.html">Classes</a> |
             <a href="listings.html">Listings</a> |
             <a href="account_dashboard.html">My account</a>
-            <a href="account_ad_create.html" class="btn btn-warning post-ad-btn">Add Event</a>
+            <a class="btn btn-warning post-ad-btn" [routerLink]="['/addevent']">Add Event</a>
 
           </div>
         </div>
@@ -735,7 +735,7 @@
           </div>-->
 
           <!-- <div _ngcontent-c1="" class=" input-group-addon hidden-xs"> -->
-          <div _ngcontent-c1="" class="btn-group">
+          <!-- <div _ngcontent-c1="" class="btn-group">
             <button _ngcontent-c1="" class="btn  dropdown-toggle" data-toggle="dropdown" type="button" aria-expanded="false">
               All categories
               <span _ngcontent-c1="" class="caret"></span>
@@ -763,7 +763,7 @@
                 <a _ngcontent-c1="" href="#">Services</a>
               </li>
             </ul>
-          </div>
+          </div> -->
           <!-- </div> -->
 
 
@@ -1299,7 +1299,7 @@
 
 
 
-      <div class="row listing-row" style="margin-top: -10px;">
+      <!-- <div class="row listing-row" style="margin-top: -10px;">
         <div class="pull-left">
           <strong>Today, Saturday 14th September</strong>
         </div>
@@ -1312,7 +1312,7 @@
             <i class="fa fa-chevron-down"></i>
           </a>
         </div>
-      </div>
+      </div> -->
       <div *ngIf="count<5">
         <div class="row premium listing-row" *ngFor="let key of objectKeys(allEvents)" >
           <!-- {{count++}} -->
@@ -1949,16 +1949,16 @@
         <div class="remodal">
           <div class="reset-password-modal--info">
             <div class="reset-password-modal--header">
-              Reset Your Password
+              <!-- Reset Your Password -->
             </div>
             <div class="reset-password-modal--description">
-              Please provide the email address you used when you signed up for your Noddy's Club account.
+              <!-- Please provide the email address you used when you signed up for your Noddy's Club account. -->
               <br>
-              <br> We will send you an email with a link to reset your password.
+              <!-- <br> We will send you an email with a link to reset your password. -->
             </div>
           </div>
 
-          <span style="font-size: 13px">hello{{keyname}}</span>
+          <!-- <span style="font-size: 13px">hello{{keyname}}</span> -->
         </div>
 
       </div>

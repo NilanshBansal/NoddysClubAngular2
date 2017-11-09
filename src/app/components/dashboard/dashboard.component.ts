@@ -32,6 +32,7 @@ export class DashboardComponent implements OnInit {
   todaysDate= this.td.getDate() +  this.months[this.td.getMonth()]  + this.td.getFullYear() ; 
   city="delhi";
   locations;
+  eventsArray=[];
   ages;
   categories;
   ngOnInit() {
@@ -45,6 +46,15 @@ export class DashboardComponent implements OnInit {
     this.fs.findItems("events").subscribe(data=>{
         console.log(data);
       this.allEvents=data;
+
+      for (var key in this.allEvents) {
+        if (this.allEvents.hasOwnProperty(key)) {
+            console.log(key , " -> " , this.allEvents[key]);
+        }
+    }
+    
+
+
       });
 
     this.fs.findItems("locations").subscribe(data=>{

@@ -16,23 +16,27 @@ import { AuthService } from "./services/auth.service";
 import { IonRangeSliderModule } from "ng2-ion-range-slider";
 import { MomentModule } from 'angular2-moment';
 import * as $ from 'jquery';
+import { AddEventComponent } from './components/add-event/add-event.component';
 export const firebaseConfig = {
   
   
-    apiKey: 'AIzaSyBua6Yn0H3flTBtEN6ZGLf_88XXNp2-hJg',
-    authDomain: 'noddysapp.firebaseapp.com',
-    databaseURL: 'https://noddysapp.firebaseio.com',
-    projectId: 'noddysapp',
-    storageBucket: 'noddysapp.appspot.com',
-    messagingSenderId: '658261542367'
+  apiKey: "AIzaSyAKt-m1_bzokNg-2ZKQYLycN8yfbNo_ipc",
+  authDomain: "noddysclub-6d0a4.firebaseapp.com",
+  databaseURL: "https://noddysclub-6d0a4.firebaseio.com",
+  projectId: "noddysclub-6d0a4",
+  storageBucket: "noddysclub-6d0a4.appspot.com",
+  messagingSenderId: "155131590327"
   
 };
+
+
 
 const appRoutes:Routes=[
   /* {path:'',component:HomeComponent},
   {path:'dashboard',component:DashboardComponent,canActivate:[AuthService]}, */
   {path:'',component:DashboardComponent},
   {path:'login',component:HomeComponent},
+  {path:'addevent',component:AddEventComponent},
 ]
 
 @NgModule({
@@ -41,7 +45,8 @@ const appRoutes:Routes=[
     HomeComponent,
     NavbarComponent,
     ModalComponent,
-    DashboardComponent
+    DashboardComponent,
+    AddEventComponent
   ],
   imports: [
     BrowserModule,
