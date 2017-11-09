@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
   locationsForm: FormGroup;
   agesForm: FormGroup;
   categoriesForm: FormGroup;
-  
+  count =0;
   allData;
   objectKeys = Object.keys;
   allEvents={};
