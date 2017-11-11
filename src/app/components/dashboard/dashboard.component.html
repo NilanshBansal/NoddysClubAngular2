@@ -794,7 +794,7 @@
                         <select class=" form-control ">
                           <optgroup *ngFor="let key of objectKeys(locations)" label="{{locations[key]['$key']}}" [hidden]="locations[key]['$value']!==undefined">
                             <ng-container *ngIf="locations[key]['$value']==undefined">
-                              <option >ptani</option>
+                              <option *ngFor="let innerkeys of objectKeys(locations[key])">{{innerkeys}}</option>
 
                             </ng-container>
                           </optgroup>
