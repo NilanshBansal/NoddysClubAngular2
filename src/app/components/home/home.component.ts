@@ -141,7 +141,7 @@ export class HomeComponent implements OnInit {
     }
 
     if (this.signupVar == false) {
-    this.signupVar = true;
+      this.signupVar = true;
       this.signupForm = this.fb.group({
         address:[earlieraddress,Validators.required],
         pin:[earlierpin,Validators.required],

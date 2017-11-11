@@ -35,11 +35,24 @@ export class FirebaseService {
      console.log("oehoe");
      this.objects=this.db.object('/items');
      console.log(this.objects.$ref);*/
+     return this.db.list('/' + stringvar);
+    
 
-    this.objects = this.db.object("/" + stringvar);
-    return this.objects;
+    /* this.objects = this.db.object("/" + stringvar);
+    return this.objects; */
 
-    //  return this.objects;
+
+  }
+
+  getEvents(stringvar){
+    return this.db.list('/' + stringvar , {
+      query: {
+        orderByChild: 'size',
+        /* startAt: 50,
+        endAt: 100,  */
+        limitToFirst:5
+      }
+    });
   }
 
   addData(stringvar, arrEvents) {
