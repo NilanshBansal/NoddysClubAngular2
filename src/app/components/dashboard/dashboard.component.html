@@ -798,24 +798,15 @@
 
                             </ng-container>
                           </optgroup>
+                          <optgroup label="other places">
                           <option *ngFor="let key of objectKeys(locations)" [hidden]="locations[key]['$value']==undefined">{{locations[key]["$key"]}}</option>
+                        </optgroup>
                         </select>
                       </div>
                     </div>
 
 
-                    <!-- <select>
-                      <optgroup label="CITY 1">
-                          <option>City 1 branch A</option>
-                          <option>City 1 branch B</option>
-                          <option>City 1 branch C</option>
-                      </optgroup>
-                  
-                      <optgroup label="CITY 2">
-                          <option>City 2 branch A</option>
-                          <option>City 2 branch B</option>
-                      </optgroup>
-                  </select> -->
+                    
 
 
                     <div class="row filter-row">
