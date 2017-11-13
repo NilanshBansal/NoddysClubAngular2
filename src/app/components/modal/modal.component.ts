@@ -9,9 +9,10 @@ import {Component,OnInit} from '@angular/core';
       <div class="modal-content">
         <div class="modal-header">
           <ng-content select=".app-modal-header"></ng-content>
+          <span><strong>{{allEvents[keyname].title}}</strong></span>
         </div>
         <div class="modal-body">
-        <span><strong>{{keyname}}</strong></span>
+        
         
         <span style="font-size: 13px" [innerHTML]="allEvents[keyname].description"></span>
         

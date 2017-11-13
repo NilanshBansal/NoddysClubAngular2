@@ -34,89 +34,76 @@ export class DashboardComponent implements OnInit {
   locations;
   eventsArray = [];
   ages;
+  lastPage:boolean=false;
   categories;
+  startAt=null;
+  pageNo=1;
+  endAt=null;
   ngOnInit() {
     this.http.get('https://developer.eventshigh.com/events/' + this.city + '?key=ev3nt5h1ghte5tK3y&cf=kids').subscribe((data) => {
       this.allData = data.json();
       console.log(this.allData);
       this.fs.addData("events", this.allData.events);
 
-    });
+    })
 
-    /* this.fs.findItems("events").subscribe(data=>{
-      this.allEvents=data;
-      console.log("plzzz bhai dekh: ",data);
-      
-      for (var key in this.allEvents) {
-        if (this.allEvents.hasOwnProperty(key)) {
-            console.log(key , " -> " , this.allEvents[key]);
-        }
-    }
-    
-
-
-      }); */
     this.fs.getEvents("events").subscribe(data => {
       this.allEvents = data;
-
-      for (var key in this.allEvents) {
-        if (this.allEvents.hasOwnProperty(key)) {
-          console.log(key, " -> ", this.allEvents[key]);
-        }
-      }
+      this.startAt=this.allEvents[Object.keys(this.allEvents).length -1];
+     
     });
 
 
     this.fs.findItems("locations").subscribe(data => {
-      console.log("plzzz bhai dekh: ", data);
 
       this.locations = data;
 
-      for (var key in this.locations) {
-        if (this.locations.hasOwnProperty(key)) {
-          console.log(key, " -> ", this.locations[key]);
-          console.log(this.locations[key]["$value"]);
-        }
-      }
     });
 
     this.fs.findItems("ages").subscribe(data => {
-      console.log("plzzz bhai dekh: ", data);
 
       this.ages = data;
 
-      for (var key in this.ages) {
-        if (this.ages.hasOwnProperty(key)) {
-          console.log(key, " -> ", this.ages[key]);
-          console.log(this.ages[key]["$value"]);
-        }
-      }
+    
     });
 
-    /*  this.fs.findItems("ages").subscribe(data=>{
-       console.log(data);
-       this.ages=data;
-     });
- 
-     this.fs.findItems("categories").subscribe(data=>{
-       console.log(data);
-       this.categories=data;
-     });
-  */
-
+   
   this.fs.findItems("categories").subscribe(data => {
-    console.log("plzzz bhai dekh: ", data);
 
     this.categories = data;
 
-    for (var key in this.categories) {
-      if (this.categories.hasOwnProperty(key)) {
-        console.log(key, " -> ", this.categories[key]);
-        console.log(this.categories[key]["$value"]);
-      }
-    }
+    
   });
   }
+
+  nextPage(){
+    console.log(this.startAt["$key"]);
+    //this.pageNo++;
+    this.fs.getEventsWithStartAt("events",this.startAt["$key"]).subscribe(data=>{
+      this.allEvents=data;
+      if(Object.keys(this.allEvents).length == 2)
+        {this.lastPage=true;}
+      console.log(data);
+      console.log("dekho");
+      console.log(data);
+      console.log(Object.keys(this.allEvents).length -1);
+      this.startAt=this.allEvents[Object.keys(this.allEvents).length -1];
+      console.log(this.startAt);
+      this.endAt=this.allEvents[0];
+      delete(this.allEvents[0]);
+    });
+  }
+
+  prevPage(){
+    this.fs.getEventsWithEndAt("events",this.endAt["$key"]).subscribe(data=>{
+      this.allEvents=data;
+      console.log("prev: ",data);
+      this.startAt=this.allEvents[Object.keys(this.allEvents).length -1];
+      this.endAt=this.allEvents[0];
+
+    });
+  }
+
 
   ngAfterViewInit() {
     console.log("after init");

@@ -43,20 +43,38 @@ export class FirebaseService {
 
 
   }
-
   getEvents(stringvar){
     return this.db.list('/' + stringvar , {
       query: {
-        orderByChild: 'size',
-        /* startAt: 50,
-        endAt: 100,  */
+        orderByKey:true,
         limitToFirst:5
       }
     });
   }
 
+  getEventsWithStartAt(stringvar,startAt){
+
+    return this.db.list('/' + stringvar , {
+      query: {
+        orderByKey:true,
+         startAt: startAt,
+         limitToFirst:6
+      }
+    });
+  }
+
+  getEventsWithEndAt(stringvar,endAt){
+    console.log(endAt);
+    return this.db.list('/' + stringvar , {
+      query: {
+        orderByKey:true,
+         endAt: endAt,
+         limitToLast:5
+      }
+    });
+  }
+
   addData(stringvar, arrEvents) {
-    console.log("calling");
     var obj = {};
     const itemRef = this.db.object("/" + stringvar, { preserveSnapshot: true });
 
