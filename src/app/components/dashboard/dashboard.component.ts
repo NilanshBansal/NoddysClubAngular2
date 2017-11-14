@@ -20,8 +20,11 @@ export class DashboardComponent implements OnInit {
     public fb: FormBuilder
   ) { }
   try;
+  interestedEventTitle;
+  interestedEventId;
   locationsForm: FormGroup;
   agesForm: FormGroup;
+  userInfoForm:FormGroup;
   categoriesForm: FormGroup;
   count = 0;
   allData;
@@ -74,6 +77,14 @@ export class DashboardComponent implements OnInit {
 
     
   });
+
+  this.userInfoForm = this.fb.group({
+    
+    email: ['', Validators.required],
+    phone: ['', Validators.required]
+  });
+
+
   }
 
   nextPage(){
@@ -115,8 +126,25 @@ export class DashboardComponent implements OnInit {
     console.log(event.from);
   }
 
-  openViewEvent() {
 
+  submitUserForm(){
+    var emailAddress=this.userInfoForm.value["email"];
+    var phone=this.userInfoForm.value["phone"];
+    alert(emailAddress);
+    alert(phone);
+    alert(this.interestedEventId);
+    alert(this.interestedEventTitle);
+    var closeModal=document.getElementById("closeModal");
+    closeModal.click();
+  }
+  
+  interested(key,allEvents){
+    var btn=document.getElementById("interestedBtn");
+    btn.click();
+    this.interestedEventTitle=allEvents[key].title;
+    this.interestedEventId=allEvents[key].id;
+    console.log(this.interestedEventTitle);
+    console.log(this.interestedEventId);
   }
 
 }

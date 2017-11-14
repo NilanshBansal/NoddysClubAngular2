@@ -9,12 +9,12 @@ import {Component,OnInit} from '@angular/core';
       <div class="modal-content">
         <div class="modal-header">
           <ng-content select=".app-modal-header"></ng-content>
-          <span><strong>{{allEvents[keyname].title}}</strong></span>
+          <span *ngIf="display"><strong>{{allEvents[keyname]?.title}}</strong></span>
         </div>
         <div class="modal-body">
         
         
-        <span style="font-size: 13px" [innerHTML]="allEvents[keyname].description"></span>
+        <span *ngIf="display" style="font-size: 13px" [innerHTML]="allEvents[keyname]?.description"></span>
         
           <ng-content select=".app-modal-body"></ng-content>
         </div>
@@ -32,11 +32,12 @@ export class ModalComponent {
   public visible = false;
   public visibleAnimate = false;
   public keyname;
+  public display:boolean=false;
   public allEvents={};
-  public show(key,allEvents): void {
+  public show(key,allEvents,display): void {
     this.keyname=key;
     this.allEvents=allEvents;
-    
+    this.display=display;
     console.log(this.allEvents);
     
     console.log("ptani");

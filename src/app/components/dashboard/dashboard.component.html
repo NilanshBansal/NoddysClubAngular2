@@ -799,14 +799,14 @@
                             </ng-container>
                           </optgroup>
                           <optgroup label="other places">
-                          <option *ngFor="let key of objectKeys(locations)" [hidden]="locations[key]['$value']==undefined">{{locations[key]["$key"]}}</option>
-                        </optgroup>
+                            <option *ngFor="let key of objectKeys(locations)" [hidden]="locations[key]['$value']==undefined">{{locations[key]["$key"]}}</option>
+                          </optgroup>
                         </select>
                       </div>
                     </div>
 
 
-                    
+
 
 
                     <div class="row filter-row">
@@ -1365,7 +1365,11 @@
             <br>
 
             <br>
-            <button class="btn btn-primary" (click)="modal.show(key,allEvents)">View More</button>
+            <button class="btn btn-primary" (click)="modal.show(key,allEvents,true)">View More</button>
+            <button  id="interestedBtn" (click)="modal2.show(key,allEvents,false)" [hidden]="true"></button>
+            <button class="btn btn-info" (click)="interested(key,allEvents)">I am interested</button>
+            <button  id="closeModal" (click)="modal2.hide()" [hidden]="true"></button>
+            
             <!-- <p class="muted">Located in
             <strong>Richmond, London</strong>
           </p>
@@ -1734,9 +1738,10 @@
           <li>
             <a (click)="prevPage()">Prev</a>
           </li>
-         
+
           <li>
-            <a *ngIf="!lastPage" (click)="nextPage()">Next</a>
+            <!--  <a *ngIf="!lastPage" (click)="nextPage()">Next</a> -->
+            <a (click)="nextPage()">Next</a>
           </li>
         </ul>
       </div>
@@ -1956,6 +1961,74 @@
     </div>
   </app-modal>
 
+
+  <app-modal #modal2 id="hello">
+    <div class="app-modal-header">
+        <!-- header-->
+
+    </div>
+    <div class="app-modal-body">
+        <!--Whatever content you like, form fields, anything-->
+
+        <div class="remodal">
+            <div class="reset-password-modal--info">
+                <div class="reset-password-modal--header">
+                    Submit Your Details
+                </div>
+                <div class="reset-password-modal--description">
+                    We will contact you !
+                    <br>
+                </div>
+            </div>
+            <form class="reset__form" [formGroup]="userInfoForm" (submit)="submitUserForm()" novalidate>
+
+
+                <div class="input-container PosR">
+                    <input autocomplete="new-password" class="w100" id="reset-email" formControlName="email" placeholder="Email" required type="email"
+                        pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$">
+
+                    
+                </div>
+                <br>
+                <div *ngIf="userInfoForm.controls.email.invalid && (userInfoForm.controls.email.dirty || userInfoForm.controls.email.touched)" class="alert alert-danger ">
+                    <div *ngIf="userInfoForm.controls.email.errors.required">
+                        Email is required.
+                    </div>
+                    <div *ngIf="userInfoForm.controls.email.errors.pattern">
+                        Invalid Email !
+                    </div>
+
+                </div>
+
+                <div class="input-container PosR">
+                  <input class="w100" id="reset-email" formControlName="phone" placeholder="Phone" required type="text" pattern="[789][0-9]{9}">
+                  
+            <input class="btn btn-block btn-primary btn-login center-block" id="submitReset" type="submit" value="Submit" [disabled]="userInfoForm.invalid">
+            
+              </div>
+              <div *ngIf="userInfoForm.controls.phone.invalid && (userInfoForm.controls.phone.dirty || userInfoForm.controls.phone.touched)" class="alert alert-danger ">
+                <div *ngIf="userInfoForm.controls.phone.errors.required">
+                    Phone No is required.
+                </div>
+                <div *ngIf="userInfoForm.controls.phone.errors.pattern">
+                  Invalid Phone No !
+              </div>
+
+            </div>
+            
+            <!-- <input class="btn btn-block btn-primary btn-login center-block" id="submitReset" type="submit" value="Submit" [disabled]="userInfoForm.invalid"> -->
+          </form>
+            hello {{[key]}}
+        </div>
+
+    </div>
+    <div class="app-modal-footer">
+        <button type="button" class="btn btn-default" (click)="modal2.hide()">Close</button>
+        <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+    </div>
+</app-modal>
+
+  
 
 
 
